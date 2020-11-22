@@ -1,0 +1,35 @@
+.w-1 {
+    grid-column: span 1;
+}
+
+.w-2 {
+    grid-column: span 2;
+}
+
+.w-3 {
+    grid-column: span 3;
+}
+
+.h-1 {
+    grid-row: span 1;
+}
+
+.h-2 {
+    grid-row: span 2;
+}
+
+.h-3 {
+    grid-row: span 3;
+}
+
+@include for-phone-only {
+    .w-1, .w-2, .w-3 {
+        grid-column: span 1;
+    }
+}
+
+@include for-phone-only {
+    .h-1, .h-2, .h-3 {
+        grid-row: span 2;
+    }
+}

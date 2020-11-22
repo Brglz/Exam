@@ -1,0 +1,140 @@
+.navbar {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: max-content;
+    background-color: black;
+
+    @include for-phone-only {
+       grid-template-columns: 1fr 3fr 1fr;
+    //    position: fixed;
+    }
+
+   &__header {
+    display: none;
+    text-align: center;
+
+    @include for-phone-only {
+        display: block;
+     }
+    
+    & h1 {
+        color: white;
+        font-size: 16px;
+    }
+
+   }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+        &-logo {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+            & a {
+                @include for-phone-only {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+            }
+
+            .logo-nav {
+                width: 180px;
+                height: 120px;
+
+                @include for-phone-only {
+                    width: 100px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+    &__mobile {
+        display: none;
+        
+        @include for-phone-only {
+            display: flex;
+            color: white;
+            position: absolute;
+            left: 85%;
+            top: 35%;
+        }
+
+        &-item {
+            cursor: pointer;
+            outline: none;
+        }
+
+        &-menu {
+            
+            display: none;
+            
+            @include for-phone-only {
+                    background-color: black;
+                    justify-content: space-around;
+                    align-items: center;
+                    
+    
+                    & a {
+                        font-size: 20px;
+                        padding: 10px;
+                    }
+
+                }
+
+        }
+        
+
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 0fr 0fr 1.2fr 1fr 1.2fr 1fr 1.2fr 1fr 1.2fr .5fr;
+
+        @include for-phone-only {
+            display: none;
+        }
+
+        @include for-tablet-portrait-up {
+            grid-template-columns: 0fr 1fr 1.2fr 1fr 1.2fr 1fr 1.2fr 1fr 1.2fr .5fr;
+        }
+
+        .figure {
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+            background-color: whitesmoke;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            &-project {
+                margin-left: 10px;
+
+            }
+           
+        }
+           
+    }
+    
+}
+
+header {
+    border-bottom: solid darkgray 1px;
+    @include for-phone-only {
+        z-index: 4;
+        position: fixed;
+        width: 100%;
+    }
+}

@@ -1,0 +1,94 @@
+.rotate {
+    transition: .3s all;
+}
+
+.rotate:hover {
+    transform: rotate(90deg);
+}
+
+.scale {
+    transition: .5 all;
+}
+
+.scale:hover {
+    transform: scale(1.2);
+}
+
+@keyframes move-down {
+
+    0% {
+        top: 10%;
+    }
+
+    
+    50% {
+        top: 35%;
+    }
+
+    
+    100% {
+        top: 50%;
+    }
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-200%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.slideInFromLeft {
+    animation: 1.5s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(200%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.slideInFromRight {
+    animation: 1.5s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(200%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+.slideInFromBottom {
+    animation: 1.5s ease-out 0s 1 slideInFromBottom;
+}
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+.slideInFromTop {
+    animation: 1.5s ease-out 0s 1 slideInFromTop;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.fadeIn {
+    animation: 1.5s ease-out 0s 1 fadeIn;
+}

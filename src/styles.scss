@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/styles/generic/generic-normalize';
+
+@import './assets/styles/settings/_settings-typography';
+@import './assets/styles/settings/_settings-colors';
+@import './assets/styles/settings/_settings-breakpoints';
+
+@import './assets/styles/objects/objects-images-size';
+
+@import './assets/styles/elements/elements-inputs';
+@import './assets/styles/elements/elements-links';
+
+@import './assets/styles/utilities/utilities-icons';
+@import './assets/styles/utilities/utilities-animations';
+
+// @import './node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
