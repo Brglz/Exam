@@ -1,0 +1,75 @@
+.form-input {
+    margin: 20px;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    color: white;
+    padding: 15px 20px;
+
+    &::placeholder {
+        color: white;
+    }
+
+    &:focus {
+        outline: none;
+        transform: scale(1.05)
+    } 
+
+    &:hover {
+        transition: all 0.5s 0s ease;
+    }
+
+    &-grey {
+        margin: 20px;
+        background-color: transparent;
+        border: 1px solid $primary-300;
+        border-radius: 6px;
+        padding: 15px 20px;
+        color: $primary-300;
+        width: 410px;
+        resize: none;
+
+        &::placeholder {
+            color: $grey-500;
+        }
+    
+        &:focus {
+            outline: none;
+            transform: scale(1.05)
+        } 
+    
+        &:hover {
+            transition: all 0.5s 0s ease;
+        }
+    }
+}
+
+.message {
+    width: 865px;
+    height: 190px;
+}
+
+.btn {
+    background-color: transparent;
+    border: 1px solid $primary-300;
+    border-radius: 6px;
+    padding: 15px 20px;
+    color: $grey-500;
+    display: block;
+    margin: 0 auto;
+    // margin: 20px;
+    cursor: pointer;
+    
+
+    &:hover {
+        background-color: $primary-300;
+        border: 1px solid black;
+        color: black;
+        border-radius: 20px 5px 20px 5px;
+        transition: .5s ease-in-out;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
