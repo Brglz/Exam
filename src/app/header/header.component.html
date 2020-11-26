@@ -2,19 +2,22 @@
     <div class="navbar">
         <div class="navbar__logo">
             <div class="navbar__logo-logo">
-                <a routerLink="/"><img class="logo-nav" src="assets/icons/logo-white.svg" alt="logo"></a>
+                <a (click)="pageTitle('HOME')" routerLink="/"><img class="logo-nav" src="assets/icons/logo-white.svg"
+                        alt="logo"></a>
             </div>
         </div>
         <nav class="navbar__wrapper">
             <div class="figure"></div>
             <div></div>
             <div class="figure"></div>
-            <div class="navbar__wrapper-item"><a class="header-link" routerLink="/photos">PHOTO</a></div>
+            <div class="navbar__wrapper-item"><a (click)="pageTitle('PHOTOS')" class="header-link"
+                    routerLink="/photos">PHOTOS</a></div>
             <div class="figure"></div>
-            <div class="navbar__wrapper-item navbar__wrapper-item-project"><a class="header-link"
-                    routerLink="/films">FILM</a></div>
+            <div class="navbar__wrapper-item navbar__wrapper-item-project"><a (click)="pageTitle('FILMS')"
+                    class="header-link" routerLink="/films">FILMS</a></div>
             <div class="figure"></div>
-            <div class="navbar__wrapper-item"><a class="header-link" routerLink="/about">CONTACT</a></div>
+            <div class="navbar__wrapper-item"><a (click)="pageTitle('ABOUT')" class="header-link"
+                    routerLink="/about">ABOUT</a></div>
             <div class="figure"></div>
             <div></div>
 
@@ -32,8 +35,8 @@
         </div>
     </div>
     <div class="navbar__mobile-menu">
-        <a routerLink="/" class="header-link">home</a>
-        <a routerLink="/photos" class="header-link">projects</a>
-        <a routerLink="/about" class="header-link">about</a>
+        <a (click)="pageTitle('Home')" routerLink="/" class="header-link">home</a>
+        <a (click)="pageTitle('PHOTOS')" routerLink="/photos" class="header-link">projects</a>
+        <a (click)="pageTitle('ABOUT')" routerLink="/about" class="header-link">about</a>
     </div>
 </header>

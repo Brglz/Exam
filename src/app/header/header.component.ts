@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  constructor() { }
+  constructor(private titlePage: Title) { }
 
-  ngOnInit(): void {
+  pageTitle(title: string) {
+    this.titlePage.setTitle(title)
   }
 
 }
