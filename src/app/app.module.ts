@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { PhotosComponent } from './photos/photos.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { PhotosComponent } from './photos/photos.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    PhotosComponent
+    PhotosComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
