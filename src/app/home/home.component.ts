@@ -19,6 +19,5 @@ export class HomeComponent implements OnInit {
   pause(target: HTMLVideoElement) {
     target.pause();
     target.muted = true;
-
   }
 }
