@@ -2,18 +2,19 @@
     <div class="navbar">
         <div class="navbar__logo">
             <div class="navbar__logo-logo">
-                <a href=""><img class="logo-nav" src="assets/icons/logo-white.svg" alt="logo"></a>
+                <a routerLink="/"><img class="logo-nav" src="assets/icons/logo-white.svg" alt="logo"></a>
             </div>
         </div>
         <nav class="navbar__wrapper">
             <div class="figure"></div>
             <div></div>
             <div class="figure"></div>
-            <div class="navbar__wrapper-item"><a class="header-link" href="">PHOTO</a></div>
+            <div class="navbar__wrapper-item"><a class="header-link" routerLink="/photos">PHOTO</a></div>
             <div class="figure"></div>
-            <div class="navbar__wrapper-item navbar__wrapper-item-project"><a class="header-link" href="">FILM</a></div>
+            <div class="navbar__wrapper-item navbar__wrapper-item-project"><a class="header-link"
+                    routerLink="/film">FILM</a></div>
             <div class="figure"></div>
-            <div class="navbar__wrapper-item"><a class="header-link" href="">CONTACT</a></div>
+            <div class="navbar__wrapper-item"><a class="header-link" routerLink="/about">CONTACT</a></div>
             <div class="figure"></div>
             <div></div>
 
@@ -31,8 +32,8 @@
         </div>
     </div>
     <div class="navbar__mobile-menu">
-        <a href="" class="header-link">home</a>
-        <a href="" class="header-link">projects</a>
-        <a href="" class="header-link">about</a>
+        <a routerLink="/" class="header-link">home</a>
+        <a routerLink="/photos" class="header-link">projects</a>
+        <a routerLink="/about" class="header-link">about</a>
     </div>
 </header>
