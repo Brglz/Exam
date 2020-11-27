@@ -4,6 +4,7 @@ import { PhotosComponent } from './photos/photos.component'
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { FilmsComponent } from './films/films.component';
+import { BlogComponent } from './blog/blog.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,11 @@ const routes: Routes = [
     path: 'films',
     pathMatch: 'full',
     component: FilmsComponent
+  },
+  {
+    path: 'blog',
+    pathMatch: 'full',
+    component: BlogComponent
   }
 ];
 

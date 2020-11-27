@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { PhotosComponent } from './photos/photos.component';
 import { AboutComponent } from './about/about.component';
 import { FilmsComponent } from './films/films.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FilmsComponent } from './films/films.component';
     HomeComponent,
     PhotosComponent,
     AboutComponent,
-    FilmsComponent
+    FilmsComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
