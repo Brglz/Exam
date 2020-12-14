@@ -4,149 +4,15 @@
         <h1 name="top">PHOTO GALLERY</h1>
     </div>
     <div class="main__container slideInFromBottom">
+        <app-photo *ngFor='let item of allPhotos' [photo]='item'></app-photo>
 
-
-        <div class="main__container-gallery h-2 w-2">
+        <div class="main__container-gallery">
             <div class="main__container-gallery-item">
                 <div class="main__container-gallery-item-image">
-                    <img src="https://source.unsplash.com/1600x900/?nature" alt="Photo">
-                </div>
-                <div class="main__container-gallery-item-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a *ngIf='isLoggedIn' routerLink='photos/add'
+                        class="main__container-gallery-item-more"><span>&#43;</span> Add more</a>
                 </div>
             </div>
-        </div>
-
-        <div class="main__container-gallery h-1 w-2">
-            <div class="main__container-gallery-item">
-                <div class="main__container-gallery-item-image">
-                    <img src="https://source.unsplash.com/1600x900/?people" alt="Photo">
-                </div>
-                <div class="main__container-gallery-item-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="main__container-gallery h-1 w-1">
-            <div class="main__container-gallery-item">
-                <div class="main__container-gallery-item-image">
-                    <img src="https://source.unsplash.com/1600x900/?sport" alt="Photo">
-                </div>
-                <div class="main__container-gallery-item-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="main__container-gallery h-2 w-2">
-            <div class="main__container-gallery-item">
-                <div class="main__container-gallery-item-image">
-                    <img src="https://source.unsplash.com/1600x900/?bikes" alt="Photo">
-                </div>
-                <div class="main__container-gallery-item-text">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="main__container-gallery h-1 w1">
-            <div class="main__container-gallery-item">
-                <div class="main__container-gallery-item-image">
-                    <img src="https://source.unsplash.com/1600x900/?fitnes" alt="Photo">
-                </div>
-                <div class="main__container-gallery-item-text">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, amet.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="main__container-gallery h-1 w1">
-            <div class="main__container-gallery-item">
-                <div class="main__container-gallery-item-image">
-                    <img src="https://source.unsplash.com/1600x900/?cars" alt="Photo">
-                </div>
-                <div class="main__container-gallery-item-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="main__container-gallery h-2 w1">
-            <div class="main__container-gallery-item">
-                <div class="main__container-gallery-item-image">
-                    <img src="https://source.unsplash.com/1600x900/?food" alt="Photo">
-                </div>
-                <div class="main__container-gallery-item-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="main__container-gallery h-1 w-2">
-            <div class="main__container-gallery-item">
-                <div class="main__container-gallery-item-image">
-                    <img src="https://source.unsplash.com/1600x900/?village" alt="Photo">
-                </div>
-                <div class="main__container-gallery-item-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="main__container-gallery h-1 w1">
-            <div class="main__container-gallery-item">
-                <div class="main__container-gallery-item-image">
-                    <img src="https://source.unsplash.com/1600x900/?travel" alt="Photo">
-                </div>
-                <div class="main__container-gallery-item-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="main__container-gallery h-1 w1">
-            <div class="main__container-gallery-item">
-                <div class="main__container-gallery-item-image">
-                    <img src="https://source.unsplash.com/1600x900/?kids" alt="Photo">
-                </div>
-                <div class="main__container-gallery-item-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="main__container-gallery h-1 w1">
-            <div class="main__container-gallery-item">
-                <div class="main__container-gallery-item-image">
-                    <img src="https://source.unsplash.com/1600x900/?city" alt="Photo">
-                </div>
-                <div class="main__container-gallery-item-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="main__container-gallery h-1 w-3">
-            <div class="main__container-gallery-item">
-                <div class="main__container-gallery-item-image">
-                    <img src="https://source.unsplash.com/1600x900/?art" alt="Photo">
-                </div>
-                <div class="main__container-gallery-item-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                </div>
-            </div>
-
         </div>
     </div>
 

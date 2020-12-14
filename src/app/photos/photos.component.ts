@@ -1,13 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { Photo } from '../models/photos.model';
+import { PhotoService } from './photo.service';
 
 @Component({
   selector: 'app-photos',
   templateUrl: './photos.component.html',
-  styleUrls: ['./photos.component.scss']
+  styleUrls: ['./photos.component.scss'],
+  providers: [PhotoService]
 })
 export class PhotosComponent implements OnInit {
 
-  constructor() { }
+  isLoggedIn = true;
+
+  allPhotos: Photo[];
+
+  constructor(private photos: PhotoService) {
+    this.allPhotos = photos.getPhotos();
+  }
 
   ngOnInit(): void {
   }

@@ -9,6 +9,8 @@ import { PhotosComponent } from './photos/photos.component';
 import { AboutComponent } from './about/about.component';
 import { FilmsComponent } from './films/films.component';
 import { BlogComponent } from './blog/blog.component';
+import { PhotoComponent } from './photos/photo/photo.component';
+import { FilmComponent } from './films/film/film.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { BlogComponent } from './blog/blog.component';
     PhotosComponent,
     AboutComponent,
     FilmsComponent,
-    BlogComponent
+    BlogComponent,
+    PhotoComponent,
+    FilmComponent
   ],
   imports: [
     BrowserModule,
