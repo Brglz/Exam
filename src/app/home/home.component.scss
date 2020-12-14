@@ -75,17 +75,6 @@
             width: 100%;
             position: relative;
 
-            &-change {
-                margin-top: 20px;
-                padding: 10px 15px;
-                background-color: $primary-300;
-                border: none;
-                border-radius: 10px;
-                color: black;
-                cursor: pointer;
-                font-size: 20px;
-            }
-
             &-photos {
                 background: url('https://cdn.pixabay.com/photo/2020/08/10/07/35/woman-5477042_1280.jpg');
                 background-repeat: no-repeat;

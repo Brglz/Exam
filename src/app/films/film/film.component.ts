@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Film } from 'src/app/models/film.model';
 
 @Component({
   selector: 'app-film',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./film.component.scss']
 })
 export class FilmComponent implements OnInit {
+  @Input() film: Film;
+
+  isLoggedIn = true;
 
   constructor() { }
 
