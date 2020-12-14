@@ -16,6 +16,7 @@ export class PhotosComponent implements OnInit {
 
   constructor(private photos: PhotoService) {
     this.allPhotos = photos.getPhotos();
+
   }
 
   ngOnInit(): void {

@@ -2,77 +2,9 @@
 
     <div class="main-projects-container">
 
-        <div class="main-projects-container-project slideInFromLeft">
-            <div class="main-projects-container-project-video">
-                <video class="main-projects-container-project-video-video" src="assets/video/aurora.mp4" loop autoplay
-                    muted></video>
-            </div>
-            <div class="main-projects-container-project-info">
-                <div class="main-projects-container-project-info-title">
-                    <p>Movie Title: <span>Night sky</span></p>
-                </div>
-                <div class="main-projects-container-project-info-role">
-                    <p>My Role: <span>I was taking pictures</span></p>
-                </div>
-                <div class="main-projects-container-project-info-movieInfo">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere adipisci hic id commodi odio
-                        ullam
-                        nam saepe eius rem maxime natus eum, enim itaque aspernatur nesciunt libero cumque quasi
-                        sint,
-                        laudantium iusto dolore est odit illum vel. Qui necessitatibus deserunt, accusamus odio
-                        veritatis
-                        esse vel sunt, delectus mollitia autem explicabo?</p>
-                </div>
-            </div>
-        </div>
+        <app-film *ngFor='let movie of allFilms' [film]='movie'></app-film>
 
-        <div class="main-projects-container-project-reverse slideInFromLeft">
-            <div class="main-projects-container-project-reverse-info">
-                <div class="main-projects-container-project-reverse-info-title">
-                    <p>Movie Title: <span>Night sky</span></p>
-                </div>
-                <div class="main-projects-container-project-reverse-info-role">
-                    <p>My Role: <span>I was taking pictures</span></p>
-                </div>
-                <div class="main-projects-container-project-reverse-info-movieInfo">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere adipisci hic id commodi odio
-                        ullam
-                        nam saepe eius rem maxime natus eum, enim itaque aspernatur nesciunt libero cumque quasi
-                        sint,
-                        laudantium iusto dolore est odit illum vel. Qui necessitatibus deserunt, accusamus odio
-                        veritatis
-                        esse vel sunt, delectus mollitia autem explicabo?</p>
-                </div>
-            </div>
-            <div class="main-projects-container-project-reverse-video">
-                <video class="main-projects-container-project-reverse-video-video" src="assets/video/aurora.mp4" loop
-                    autoplay muted></video>
-            </div>
-        </div>
-
-        <div class="main-projects-container-project slideInFromLeft">
-            <div class="main-projects-container-project-video">
-                <video class="main-projects-container-project-video-video" src="assets/video/aurora.mp4" loop autoplay
-                    muted></video>
-            </div>
-            <div class="main-projects-container-project-info">
-                <div class="main-projects-container-project-info-title">
-                    <p>Movie Title: <span>Night sky</span></p>
-                </div>
-                <div class="main-projects-container-project-info-role">
-                    <p>My Role: <span>I was taking pictures</span></p>
-                </div>
-                <div class="main-projects-container-project-info-movieInfo">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere adipisci hic id commodi odio
-                        ullam
-                        nam saepe eius rem maxime natus eum, enim itaque aspernatur nesciunt libero cumque quasi
-                        sint,
-                        laudantium iusto dolore est odit illum vel. Qui necessitatibus deserunt, accusamus odio
-                        veritatis
-                        esse vel sunt, delectus mollitia autem explicabo?</p>
-                </div>
-            </div>
-        </div>
+        <button *ngIf='isLoggedIn' class="btn-primary slideInFromBottom">Add More</button>
 
     </div>
 

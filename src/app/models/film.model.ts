@@ -1,3 +1,3 @@
 export class Film {
-    constructor(title: string, role: string, description: string, imgUrl: string) { }
+    constructor(public title: string, public role: string, public description: string, public imgUrl: string) { }
 }
