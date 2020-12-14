@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilmsComponent implements OnInit {
 
+  isLoggedIn = true;
+
   constructor() { }
 
   ngOnInit(): void {
