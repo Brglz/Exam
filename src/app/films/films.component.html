@@ -4,7 +4,7 @@
 
         <app-film *ngFor='let movie of allFilms' [film]='movie'></app-film>
 
-        <button *ngIf='isLoggedIn' class="btn-primary btn slideInFromBottom">Add More</button>
+        <a *ngIf='isLoggedIn' routerLink='add' class="btn-primary btn slideInFromBottom">Add More</a>
 
     </div>
 

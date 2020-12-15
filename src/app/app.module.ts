@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +11,10 @@ import { FilmsComponent } from './films/films.component';
 import { BlogComponent } from './blog/blog.component';
 import { PhotoComponent } from './photos/photo/photo.component';
 import { FilmComponent } from './films/film/film.component';
+import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EditComponent } from './photos/edit/edit.component';
+import { CreateComponent } from './photos/create/create.component';
 
 
 @NgModule({
@@ -23,13 +27,17 @@ import { FilmComponent } from './films/film/film.component';
     FilmsComponent,
     BlogComponent,
     PhotoComponent,
-    FilmComponent
+    FilmComponent,
+    FooterComponent,
+    EditComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

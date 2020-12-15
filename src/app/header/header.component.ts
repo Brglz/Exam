@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -8,7 +8,9 @@ import { Title } from '@angular/platform-browser';
 })
 export class HeaderComponent {
 
-  constructor(private titlePage: Title) { }
+  constructor(private titlePage: Title) {
+    titlePage.setTitle('Home');
+  }
 
   pageTitle(title: string) {
     this.titlePage.setTitle(title)

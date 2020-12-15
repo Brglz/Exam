@@ -12,6 +12,6 @@
         <div class="main-projects-container-project-info-movieInfo">
             <p>{{film.description}}</p>
         </div>
-        <button *ngIf='isLoggedIn' routerLink='/edit' class="btn-primary btn">Edit</button>
+        <a *ngIf='isLoggedIn' routerLink='edit/:id' class="btn-primary btn">Edit</a>
     </div>
 </div>
