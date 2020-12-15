@@ -4,7 +4,7 @@
         <h1 name="top">PHOTO GALLERY</h1>
     </div>
     <div class="main__container slideInFromBottom">
-        <app-photo *ngFor='let item of allPhotos' [photo]='item'></app-photo>
+        <app-photo *ngFor='let item of allPhotos;let i =index' [photo]='item' [index]='i'></app-photo>
 
         <div class="main__container-gallery">
             <div class="main__container-gallery-item">

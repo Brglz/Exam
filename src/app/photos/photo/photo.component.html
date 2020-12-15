@@ -2,9 +2,11 @@
     <div class="main__container-gallery-item">
         <div class="main__container-gallery-item-image">
             <img src="{{photo.imgURL}}" alt="{{photo.name}}">
+            <a *ngIf='isLoggedIn' (click)='removePhoto(index)' class="btn-primary btn">Delete</a>
         </div>
         <div class="main__container-gallery-item-text">
             <p>{{photo.description}}</p>
+
         </div>
     </div>
 </div>
