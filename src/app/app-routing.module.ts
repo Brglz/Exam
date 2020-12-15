@@ -5,6 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { FilmsComponent } from './films/films.component';
 import { BlogComponent } from './blog/blog.component';
+import { PhotoCreateComponent } from './photos/photo-create/photo-create.component';
+import { PhotoEditComponent } from './photos/photo-edit/photo-edit.component';
 
 const routes: Routes = [
   {
@@ -15,7 +17,15 @@ const routes: Routes = [
   {
     path: 'photos',
     pathMatch: 'full',
-    component: PhotosComponent
+    component: PhotosComponent,
+  },
+  {
+    path: 'photos/edit',
+    component: PhotoEditComponent
+  },
+  {
+    path: 'photos/add',
+    component: PhotoCreateComponent
   },
   {
     path: 'about',

@@ -12,9 +12,8 @@ import { BlogComponent } from './blog/blog.component';
 import { PhotoComponent } from './photos/photo/photo.component';
 import { FilmComponent } from './films/film/film.component';
 import { FooterComponent } from './footer/footer.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { EditComponent } from './photos/edit/edit.component';
-import { CreateComponent } from './photos/create/create.component';
+import { PhotoCreateComponent } from './photos/photo-create/photo-create.component';
+import { PhotoEditComponent } from './photos/photo-edit/photo-edit.component';
 
 
 @NgModule({
@@ -29,13 +28,12 @@ import { CreateComponent } from './photos/create/create.component';
     PhotoComponent,
     FilmComponent,
     FooterComponent,
-    EditComponent,
-    CreateComponent
+    PhotoCreateComponent,
+    PhotoEditComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
   ],
   providers: [Title],
   bootstrap: [AppComponent]
