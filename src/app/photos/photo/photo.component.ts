@@ -13,9 +13,14 @@ export class PhotoComponent implements OnInit {
 
   isLoggedIn = true;
 
-  constructor() { }
+  constructor(private photoService: PhotoService) { }
 
   ngOnInit(): void {
+  }
+
+  removePhoto(index) {
+    this.photoService.deletePhoto(index)
+      .subscribe()
   }
 
 

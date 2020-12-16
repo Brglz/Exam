@@ -1,20 +1,32 @@
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { HttpService } from "../http.service";
 import { Film } from "../models/film.model";
+
+@Injectable()
 
 export class FilmService {
 
-  private films: Film[] = [
-    new Film('Titanic 1', 'I was taking pictures', 'This was a nice movie.This was a nice movie.This was a nice movie.This was a nice movie.', 'assets/video/aurora.mp4'),
-    new Film('Titanic 2', 'I was taking pictures', 'This was a nice movie.This was a nice movie.This was a nice movie.This was a nice movie.', 'assets/video/aurora.mp4'),
-    new Film('Titanic 3', 'I was taking pictures', 'This was a nice movie.This was a nice movie.This was a nice movie.This was a nice movie.', 'assets/video/aurora.mp4'),
-    new Film('Titanic 4', 'I was taking pictures', 'This was a nice movie.This was a nice movie.This was a nice movie.This was a nice movie.', 'assets/video/aurora.mp4'),
-    new Film('Titanic 5', 'I was taking pictures', 'This was a nice movie.This was a nice movie.This was a nice movie.This was a nice movie.', 'assets/video/aurora.mp4')
-  ];
+  constructor(private http: HttpClient, private httpService: HttpService) { }
 
   getFilms() {
-    return this.films;
+    return this.http.get(this.httpService.hostUrl() + 'films');
   }
 
-  removeFilm(index) {
-    this.films.splice(index, 1);
+  getFilm(id) {
+    return this.http.get(this.httpService.hostUrl() + 'films/' + id)
   }
+
+  postFilms(film: Film) {
+    return this.http.post<any>(this.httpService.hostUrl() + 'films', film)
+  }
+
+  deleteFilm(index) {
+    return this.http.delete<any>(this.httpService.hostUrl() + 'films/' + index)
+  }
+
+  editFilm(id, data) {
+    return this.http.put<any>(this.httpService.hostUrl() + 'films/' + id, data)
+  }
+
 }
