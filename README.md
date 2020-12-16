@@ -1,4 +1,4 @@
-# Idea: This is a Portfolio for a producent
+# Idea: This is a Portfolio for a Producer
 
 # Features
 
