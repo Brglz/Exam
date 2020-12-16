@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { About } from '../models/about.model';
+import { AboutInterface } from './about-interface.service';
 import { AboutService } from './about.service';
 
 @Component({
@@ -15,10 +16,10 @@ export class AboutComponent implements OnInit {
   about: About;
 
   constructor(private aboutService: AboutService) {
-    this.about = aboutService.getAbout();
   }
 
   ngOnInit(): void {
+    this.aboutService.getAbout().subscribe(data => this.about = data)
   }
 
 }
