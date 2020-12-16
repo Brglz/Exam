@@ -1,6 +1,15 @@
+# Idea: This is a Portfolio for a Producer
+
+# Features
+
+   1. Home page displays 2 projects and they lead to project pages.
+   2. Photos page displays photos and if the owner is logged in he/she can add more photos or delete current ones.
+   3. Films page displayes films and short description about them and the role the portfolio owner had in them. If logged in the owner can add more movies, edit current ones and delete them.
+   4. About page displayes short info about the owner and form to contact him/her. If logged in the owner can edit its bio.
+
 # Exam
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+This app uses Angular for front end and https://backendless.com for backend
 
 ## Development server
 
