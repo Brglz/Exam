@@ -3,14 +3,14 @@
         <div class="about-main-contact-heading">
             <h4>Edit Home Page Film</h4>
         </div>
-        <form>
+        <form #filmForm='ngForm' (ngSubmit)='onSubmit(filmForm.value)'>
             <div class="form-primary">
-                <input class="form-input-grey" type="text" placeholder="Title">
-                <input class="form-input-grey" type="text" placeholder="role">
-                <input class="form-input-grey" type="text" placeholder="Description">
-                <input class="form-input-grey" type="text" placeholder="imgURL">
+                <input class="form-input-grey" name="title" ngModel type="text" placeholder="Title">
+                <input class="form-input-grey" name="role" ngModel type="text" placeholder="role">
+                <input class="form-input-grey" name="description" ngModel type="text" placeholder="Description">
+                <input class="form-input-grey" name="imgURL" ngModel type="text" placeholder="imgURL">
             </div>
-            <button class="btn">SEND</button>
+            <button type="submit" class="btn">SEND</button>
         </form>
     </div>
 </div>

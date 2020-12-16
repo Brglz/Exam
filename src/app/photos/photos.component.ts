@@ -18,8 +18,12 @@ export class PhotosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.photos.getPhotos('photos')
-      .subscribe(data => { this.allPhotos = data })
+    this.photos.getPhotos()
+      .subscribe(data => {
+        this.allPhotos = data
+        console.log(data[0].objectId);
+      })
+
   }
 
 }

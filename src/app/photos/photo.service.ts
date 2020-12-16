@@ -1,21 +1,28 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
+import { HttpService } from "../http.service";
+import { Photo } from "../models/photos.model";
 import { PhotoInterface } from "./photo-interface";
 
 @Injectable()
 
 export class PhotoService {
 
+  public photos;
 
-  private appId = '1CC5FA94-3C48-315E-FF9F-32A41CCF2500';
-  private apiKey = '43E7AF4E-FFA2-4AF4-A668-D9328C93B81D';
+  constructor(private http: HttpClient, private httpService: HttpService) { }
 
-  private _url: string = `https://api.backendless.com/${this.appId}/${this.apiKey}/data/`;
-
-  constructor(private http: HttpClient) { }
-
-  getPhotos(endPoint): Observable<PhotoInterface[]> {
-    return this.http.get<PhotoInterface[]>(this._url + endPoint)
+  getPhotos(): Observable<PhotoInterface[]> {
+    return this.http.get<PhotoInterface[]>(this.httpService.hostUrl() + 'photos')
   }
+
+  postPhotos(photo: Photo) {
+    return this.http.post<any>(this.httpService.hostUrl() + 'photos', photo)
+  }
+
+  deletePhoto(index) {
+    return this.http.delete<any>(this.httpService.hostUrl() + 'photos' + '/' + index)
+  }
+
 }

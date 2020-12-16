@@ -19,7 +19,8 @@ export class FilmComponent implements OnInit {
   }
 
   removeFilm(index) {
-    this.filmService.removeFilm(index);
+    this.filmService.deleteFilm(index)
+      .subscribe()
   }
 
 }

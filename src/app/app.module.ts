@@ -19,6 +19,8 @@ import { FilmSingleEditComponent } from './films/film-single-edit/film-single-ed
 import { AboutEditComponent } from './about/about-edit/about-edit.component';
 import { FilmAddComponent } from './films/film-add/film-add.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { HttpService } from './http.service';
 
 
 @NgModule({
@@ -43,9 +45,10 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [Title],
+  providers: [Title, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

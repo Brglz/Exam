@@ -12,13 +12,13 @@ export class FilmsComponent implements OnInit {
 
   isLoggedIn = true;
 
-  allFilms: Film[];
+  allFilms;
 
   constructor(private films: FilmService) {
-    this.allFilms = films.getFilms().reverse();
   }
 
   ngOnInit(): void {
+    this.films.getFilms().subscribe(data => { this.allFilms = data })
   }
 
 }
