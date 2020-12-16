@@ -15,10 +15,11 @@ export class PhotosComponent implements OnInit {
   allPhotos: Photo[];
 
   constructor(private photos: PhotoService) {
-    this.allPhotos = photos.getPhotos();
   }
 
   ngOnInit(): void {
+    this.photos.getPhotos('photos')
+      .subscribe(data => { this.allPhotos = data })
   }
 
 }

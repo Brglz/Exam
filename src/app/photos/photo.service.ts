@@ -1,40 +1,21 @@
-import { Photo } from "../models/photos.model";
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { PhotoInterface } from "./photo-interface";
+
+@Injectable()
 
 export class PhotoService {
 
-  private photos: Photo[] = [
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo'),
-    new Photo('My photo', 'https://www.pandasecurity.com/en/mediacenter/src/uploads/2013/11/pandasecurity-facebook-photo-privacy.jpg', 'This is my photo')
-  ];
 
-  getPhotos() {
-    return this.photos;
-  }
+  private appId = '1CC5FA94-3C48-315E-FF9F-32A41CCF2500';
+  private apiKey = '43E7AF4E-FFA2-4AF4-A668-D9328C93B81D';
 
-  addPhoto(photo): void {
-    this.photos.push(photo);
-  }
+  private _url: string = `https://api.backendless.com/${this.appId}/${this.apiKey}/data/`;
 
-  removePhoto(index): void {
-    this.photos.splice(index, 1);
+  constructor(private http: HttpClient) { }
+
+  getPhotos(endPoint): Observable<PhotoInterface[]> {
+    return this.http.get<PhotoInterface[]>(this._url + endPoint)
   }
 }
