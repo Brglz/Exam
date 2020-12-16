@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../photo.service';
 
 @Component({
   selector: 'app-photo-edit',
@@ -8,7 +7,7 @@ import { PhotoService } from '../photo.service';
 })
 export class PhotoEditComponent implements OnInit {
 
-  constructor(private photoService: PhotoService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

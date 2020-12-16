@@ -2,7 +2,7 @@
 
     <div class="main-projects-container">
 
-        <app-film *ngFor='let movie of allFilms' [film]='movie'></app-film>
+        <app-film *ngFor='let movie of allFilms; let i = index' [film]='movie' [index]='i'></app-film>
 
         <a *ngIf='isLoggedIn' routerLink='add' class="btn-primary btn slideInFromBottom">Add More</a>
 

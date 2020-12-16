@@ -13,4 +13,8 @@ export class FilmService {
   getFilms() {
     return this.films;
   }
+
+  removeFilm(index) {
+    this.films.splice(index, 1);
+  }
 }

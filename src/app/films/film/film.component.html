@@ -12,6 +12,9 @@
         <div class="main-projects-container-project-info-movieInfo">
             <p>{{film.description}}</p>
         </div>
-        <a *ngIf='isLoggedIn' routerLink='edit/:id' class="btn-primary btn">Edit</a>
+        <div>
+            <a *ngIf='isLoggedIn' routerLink='edit/{{index}}' class="btn-primary btn">Edit</a>
+            <a *ngIf='isLoggedIn' (click)='removeFilm(index)' class="btn-primary btn delete">Delete</a>
+        </div>
     </div>
 </div>

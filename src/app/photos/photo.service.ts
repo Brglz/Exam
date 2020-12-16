@@ -30,7 +30,11 @@ export class PhotoService {
     return this.photos;
   }
 
-  addPhoto(photo) {
+  addPhoto(photo): void {
     this.photos.push(photo);
+  }
+
+  removePhoto(index): void {
+    this.photos.splice(index, 1);
   }
 }

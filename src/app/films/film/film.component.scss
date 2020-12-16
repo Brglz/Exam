@@ -80,4 +80,10 @@
 .btn-primary {
     width: max-content;
     text-transform: capitalize;
+    display: inline-block;
+}
+
+.delete {
+    background-color: red;
+    margin-left: 10px;
 }

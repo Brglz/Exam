@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Film } from 'src/app/models/film.model';
+import { FilmService } from '../film.service';
 
 @Component({
   selector: 'app-film',
@@ -8,12 +9,17 @@ import { Film } from 'src/app/models/film.model';
 })
 export class FilmComponent implements OnInit {
   @Input() film: Film;
+  @Input() index: Film;
 
   isLoggedIn = true;
 
-  constructor() { }
+  constructor(private filmService: FilmService) { }
 
   ngOnInit(): void {
+  }
+
+  removeFilm(index) {
+    this.filmService.removeFilm(index);
   }
 
 }

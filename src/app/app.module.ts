@@ -14,6 +14,8 @@ import { FilmComponent } from './films/film/film.component';
 import { FooterComponent } from './footer/footer.component';
 import { PhotoCreateComponent } from './photos/photo-create/photo-create.component';
 import { PhotoEditComponent } from './photos/photo-edit/photo-edit.component';
+import { FilmEditComponent } from './films/film-edit/film-edit.component';
+import { FilmSingleEditComponent } from './films/film-single-edit/film-single-edit.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { PhotoEditComponent } from './photos/photo-edit/photo-edit.component';
     FooterComponent,
     PhotoCreateComponent,
     PhotoEditComponent,
+    FilmEditComponent,
+    FilmSingleEditComponent,
   ],
   imports: [
     BrowserModule,
