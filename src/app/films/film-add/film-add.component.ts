@@ -15,13 +15,8 @@ export class FilmAddComponent implements OnInit {
   }
 
   onSubmit(data) {
-    console.log(data);
-
     this.film.postFilms(data)
-      .subscribe(
-        data => console.log('Success', data),
-        error => console.error('Error', error)
-      );
+      .subscribe();
   }
 
 }

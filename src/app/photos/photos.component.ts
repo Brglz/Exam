@@ -21,7 +21,6 @@ export class PhotosComponent implements OnInit {
     this.photos.getPhotos()
       .subscribe(data => {
         this.allPhotos = data
-        console.log(data[0].objectId);
       })
 
   }

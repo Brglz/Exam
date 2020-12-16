@@ -14,10 +14,7 @@ export class PhotoCreateComponent implements OnInit {
 
   onSubmit(data) {
     this.photo.postPhotos(data)
-      .subscribe(
-        data => console.log('Success', data),
-        error => console.error('Error', error)
-      );
+      .subscribe();
   }
 
   ngOnInit(): void {

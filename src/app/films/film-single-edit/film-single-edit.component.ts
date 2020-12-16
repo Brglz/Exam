@@ -18,14 +18,12 @@ export class FilmSingleEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.film.getFilm(this.route.snapshot.params.id).subscribe(data => {
-      console.log(this.currentFilm = data);
+      this.currentFilm = data;
     })
   }
 
   onSubmit(data) {
-    this.film.editFilm(this.route.snapshot.params.id, data).subscribe(data => {
-      console.log(data);
-    })
+    this.film.editFilm(this.route.snapshot.params.id, data).subscribe()
   }
 
 }
