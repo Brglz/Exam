@@ -8,4 +8,8 @@ export class AboutService {
     return this.about;
   }
 
+  editAbout(edited: About) {
+    this.about = edited;
+  }
+
 }

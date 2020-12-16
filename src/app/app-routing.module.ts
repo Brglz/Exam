@@ -9,6 +9,8 @@ import { PhotoCreateComponent } from './photos/photo-create/photo-create.compone
 import { PhotoEditComponent } from './photos/photo-edit/photo-edit.component';
 import { FilmEditComponent } from './films/film-edit/film-edit.component';
 import { FilmSingleEditComponent } from './films/film-single-edit/film-single-edit.component';
+import { AboutEditComponent } from './about/about-edit/about-edit.component';
+import { FilmAddComponent } from './films/film-add/film-add.component';
 
 const routes: Routes = [
   {
@@ -35,9 +37,17 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
+    path: 'about/edit',
+    component: AboutEditComponent
+  },
+  {
     path: 'films',
     pathMatch: 'full',
     component: FilmsComponent
+  },
+  {
+    path: 'films/add',
+    component: FilmAddComponent
   },
   {
     path: 'films/edit',

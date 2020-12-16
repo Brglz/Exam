@@ -16,6 +16,8 @@ import { PhotoCreateComponent } from './photos/photo-create/photo-create.compone
 import { PhotoEditComponent } from './photos/photo-edit/photo-edit.component';
 import { FilmEditComponent } from './films/film-edit/film-edit.component';
 import { FilmSingleEditComponent } from './films/film-single-edit/film-single-edit.component';
+import { AboutEditComponent } from './about/about-edit/about-edit.component';
+import { FilmAddComponent } from './films/film-add/film-add.component';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { FilmSingleEditComponent } from './films/film-single-edit/film-single-ed
     PhotoEditComponent,
     FilmEditComponent,
     FilmSingleEditComponent,
+    AboutEditComponent,
+    FilmAddComponent,
   ],
   imports: [
     BrowserModule,
