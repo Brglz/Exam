@@ -3,11 +3,10 @@
         <div class="about-main-contact-heading">
             <h4>Edit Home Page Photo</h4>
         </div>
-        <form>
+        <form #photoEdit='ngForm' (ngSubmit)='onSubmit(photoEdit.value)'>
             <div class="form-primary">
-                <input class="form-input-grey" type="text" placeholder="Name">
-                <input class="form-input-grey" type="text" placeholder="imgURL">
-                <input class="form-input-grey" type="text" placeholder="Description">
+                <input class="form-input-grey" name="name" ngModel type="text" placeholder="Name">
+                <input class="form-input-grey" name='imgURL' ngModel type="text" placeholder="imgURL">
             </div>
             <button class="btn">SEND</button>
         </form>
