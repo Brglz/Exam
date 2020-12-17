@@ -11,12 +11,17 @@ import { FilmEditComponent } from './films/film-edit/film-edit.component';
 import { FilmSingleEditComponent } from './films/film-single-edit/film-single-edit.component';
 import { AboutEditComponent } from './about/about-edit/about-edit.component';
 import { FilmAddComponent } from './films/film-add/film-add.component';
+import { AuthComponent } from './auth/auth.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
     component: HomeComponent
+  },
+  {
+    path: 'login',
+    component: AuthComponent
   },
   {
     path: 'photos',

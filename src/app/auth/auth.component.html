@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="about-main-contact fadeIn">
+        <div class="about-main-contact-heading">
+            <h4>Login</h4>
+        </div>
+        <form #login='ngForm' (ngSubmit)='onSubmit(login)'>
+            <div class="form-primary">
+                <input class="form-input-grey" name="email" ngModel type="email" placeholder="Email" required email
+                    minlength="6">
+                <input class="form-input-grey" name='password' ngModel type="password" placeholder="Password" required
+                    minlength="6">
+            </div>
+            <button type="submit" class="btn" [disabled]='!login.valid'>LOGIN</button>
+        </form>
+    </div>
+</div>
