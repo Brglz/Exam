@@ -29,4 +29,11 @@ export class FilmService {
     return this.http.put<any>(this.httpService.hostUrl() + 'films/' + id, data)
   }
 
+  editHomeFilm(data) {
+    return this.http.put(this.httpService.hostUrl() + 'film/4C7BF235-0195-4825-B4B5-9029FFC2AA7A', data)
+  }
+
+  getHomeFilm() {
+    return this.http.get(this.httpService.hostUrl() + 'film/4C7BF235-0195-4825-B4B5-9029FFC2AA7A');
+  }
 }

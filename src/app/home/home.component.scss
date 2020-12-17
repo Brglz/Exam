@@ -76,7 +76,7 @@
             position: relative;
 
             &-photos {
-                background: url('https://cdn.pixabay.com/photo/2020/08/10/07/35/woman-5477042_1280.jpg');
+                // background: url('https://cdn.pixabay.com/photo/2020/08/10/07/35/woman-5477042_1280.jpg');
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -112,10 +112,11 @@
             &-videos {
                 overflow: hidden;
                 height: 440px;
-
                 
                 & video {
                     opacity: 1;
+                    // width: 100%;
+                    height: 100%;
                 }
             
                 &-hover {

@@ -4,7 +4,11 @@
     </div>
     <div class="home-main-content fadeIn">
 
-        <div class="home-main-content-box home-main-content-box-photos">
+        <div class="home-main-content-box home-main-content-box-photos" style="background: url({{photo?.imgURL}}); background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: 0.8;
+        height: 440px;">
             <div class="home-main-content-box-photos-hover">
                 <i class="far fa-images fa-4x home-main-content-box-photos-hover-img"></i>
                 <a class="home-main-content-box-hover-cta main-link" routerLink='photos'>Check all photos</a>
@@ -13,14 +17,13 @@
             </div>
         </div>
 
-        <div (mouseover)="play(video)" (mouseout)='pause(video)'
-            class="home-main-content-box home-main-content-box-videos">
-            <video #video width="150%" height="200%" class="home-main-content-box-videos-video" [muted]="'muted'" loop
-                id="myVideo">
-                <source src="assets/video/Pulp Fiction (1994) in 10 seconds (online-video-cutter.com).mp4"
-                    type="video/mp4">
+        <div class="home-main-content-box home-main-content-box-videos">
+            <!-- <video #video width="150%" height="200%" class="home-main-content-box-videos-video" [src]='film?.imgURL'
+                [muted]="'muted'" loop id="myVideo">
                 Your browser does not support HTML5 video.
-            </video>
+            </video> -->
+            <video #video class="main-projects-container-project-video-video" src="{{film?.imgURL}}" loop autoplay
+                [muted]="'muted'"></video>
             <div class="home-main-content-box-videos-hover">
                 <i class="fas fa-video fa-3x home-main-content-box-videos-hover-img"></i>
                 <a class="home-main-content-box-hover-cta main-link" routerLink='/films'>Check all films</a>
