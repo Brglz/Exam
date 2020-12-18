@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { AuthService } from '../auth/auth.service';
 import { FilmService } from '../films/film.service';
-import { Home } from '../models/home.model';
 import { PhotoService } from '../photos/photo.service';
 
 @Component({
@@ -15,8 +15,9 @@ export class HomeComponent implements OnInit {
   photo;
   film;
 
-  isLoggedIn = true;
-  constructor(private title: Title, private photoService: PhotoService, private filmService: FilmService) {
+  isLoggedIn = false;
+  constructor(private title: Title, private photoService: PhotoService, private filmService: FilmService, private authService: AuthService) {
+    this.isLoggedIn = authService._isLoggedIn;
   }
 
   ngOnInit(): void {

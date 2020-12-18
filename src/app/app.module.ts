@@ -8,7 +8,6 @@ import { HomeComponent } from './home/home.component';
 import { PhotosComponent } from './photos/photos.component';
 import { AboutComponent } from './about/about.component';
 import { FilmsComponent } from './films/films.component';
-import { BlogComponent } from './blog/blog.component';
 import { PhotoComponent } from './photos/photo/photo.component';
 import { FilmComponent } from './films/film/film.component';
 import { FooterComponent } from './footer/footer.component';
@@ -21,7 +20,10 @@ import { FilmAddComponent } from './films/film-add/film-add.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HttpService } from './http.service';
+import { LoadingSpinerComponent } from './shared/loading-spiner/loading-spiner.component';
 import { AuthComponent } from './auth/auth.component';
+import { AuthService } from './auth/auth.service';
+import { AuthGuard } from './auth/auth.guard';
 
 
 @NgModule({
@@ -32,7 +34,6 @@ import { AuthComponent } from './auth/auth.component';
     PhotosComponent,
     AboutComponent,
     FilmsComponent,
-    BlogComponent,
     PhotoComponent,
     FilmComponent,
     FooterComponent,
@@ -42,7 +43,8 @@ import { AuthComponent } from './auth/auth.component';
     FilmSingleEditComponent,
     AboutEditComponent,
     FilmAddComponent,
-    AuthComponent,
+    LoadingSpinerComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,7 @@ import { AuthComponent } from './auth/auth.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [Title, HttpService],
+  providers: [Title, HttpService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

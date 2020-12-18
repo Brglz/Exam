@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
 import { Film } from 'src/app/models/film.model';
 import { FilmService } from '../film.service';
 
@@ -11,11 +12,12 @@ export class FilmComponent implements OnInit {
   @Input() film: Film;
   @Input() index: Film;
 
-  isLoggedIn = true;
+  isLoggedIn = false;
 
-  constructor(private filmService: FilmService) { }
+  constructor(private filmService: FilmService, private authServie: AuthService) { }
 
   ngOnInit(): void {
+    this.isLoggedIn = this.authServie._isLoggedIn;
   }
 
   removeFilm(index) {
