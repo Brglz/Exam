@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Film } from 'src/app/models/film.model';
 import { FilmService } from '../film.service';
 
@@ -13,7 +13,7 @@ export class FilmSingleEditComponent implements OnInit {
 
   currentFilm;
 
-  constructor(private route: ActivatedRoute, private film: FilmService) {
+  constructor(private route: ActivatedRoute, private film: FilmService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -23,7 +23,9 @@ export class FilmSingleEditComponent implements OnInit {
   }
 
   onSubmit(data) {
-    this.film.editFilm(this.route.snapshot.params.id, data).subscribe()
+    this.film.editFilm(this.route.snapshot.params.id, data).subscribe(data => {
+      this.router.navigate(['films'])
+    })
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FilmService } from '../film.service';
 
 @Component({
@@ -9,13 +10,15 @@ import { FilmService } from '../film.service';
 })
 export class FilmEditComponent implements OnInit {
 
-  constructor(private filmService: FilmService) { }
+  constructor(private filmService: FilmService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(data) {
-    return this.filmService.editHomeFilm(data).subscribe();
+    return this.filmService.editHomeFilm(data).subscribe(data => {
+      this.router.navigate([''])
+    });
   }
 
 }

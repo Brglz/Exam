@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthResponseData, AuthService } from './auth.service';
 
@@ -13,7 +14,7 @@ export class AuthComponent implements OnInit {
   isLoading: boolean = false;
   error: string = null;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -32,7 +33,7 @@ export class AuthComponent implements OnInit {
         localStorage.setItem('token', data['user-token']);
         this.error = null;
         this.authService._isLoggedIn = true;
-        console.log(data);
+        this.router.navigate([''])
       },
       error => {
         this.isLoading = false;

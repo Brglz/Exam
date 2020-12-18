@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PhotoService } from '../photo.service';
 
 @Component({
@@ -9,12 +10,14 @@ import { PhotoService } from '../photo.service';
 })
 export class PhotoCreateComponent implements OnInit {
 
-  constructor(private photo: PhotoService) { }
+  constructor(private photo: PhotoService, private router: Router) { }
 
 
   onSubmit(data) {
     this.photo.postPhotos(data)
-      .subscribe();
+      .subscribe(data => {
+        this.router.navigate(['photos'])
+      });
   }
 
   ngOnInit(): void {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PhotoService } from '../photo.service';
 
 @Component({
@@ -9,13 +10,15 @@ import { PhotoService } from '../photo.service';
 })
 export class PhotoEditComponent implements OnInit {
 
-  constructor(private photoService: PhotoService) { }
+  constructor(private photoService: PhotoService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(data) {
-    return this.photoService.editPhoto(data).subscribe();
+    return this.photoService.editPhoto(data).subscribe(data => {
+      this.router.navigate([''])
+    });
   }
 
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AboutService } from '../about.service';
 
 @Component({
@@ -9,13 +10,15 @@ import { AboutService } from '../about.service';
 })
 export class AboutEditComponent implements OnInit {
 
-  constructor(private aboutService: AboutService) { }
+  constructor(private aboutService: AboutService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(data) {
-    return this.aboutService.editAbout(data).subscribe()
+    return this.aboutService.editAbout(data).subscribe(data => {
+      this.router.navigate(['about'])
+    })
   }
 
 }
