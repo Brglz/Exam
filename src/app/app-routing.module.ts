@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PhotosComponent } from './photos/photos.component'
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { PhotoCreateComponent } from './photos/photo-create/photo-create.component';
-import { PhotoEditComponent } from './photos/photo-edit/photo-edit.component';
 import { AboutEditComponent } from './about/about-edit/about-edit.component';
 import { AuthComponent } from './auth/auth.component';
 import { AuthGuard } from './auth/auth.guard';
@@ -20,23 +17,6 @@ const routes: Routes = [
     component: AuthComponent
   },
   {
-    path: 'photos',
-    pathMatch: 'full',
-    component: PhotosComponent,
-
-  },
-  {
-    path: 'photos/edit',
-    component: PhotoEditComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'photos/add',
-    component: PhotoCreateComponent,
-    canActivate: [AuthGuard]
-
-  },
-  {
     path: 'about',
     pathMatch: 'full',
     component: AboutComponent,
@@ -46,7 +26,6 @@ const routes: Routes = [
     path: 'about/edit',
     component: AboutEditComponent,
     canActivate: [AuthGuard]
-
   }
 
 ];

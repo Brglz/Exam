@@ -5,12 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { PhotosComponent } from './photos/photos.component';
 import { AboutComponent } from './about/about.component';
-import { PhotoComponent } from './photos/photo/photo.component';
 import { FooterComponent } from './footer/footer.component';
-import { PhotoCreateComponent } from './photos/photo-create/photo-create.component';
-import { PhotoEditComponent } from './photos/photo-edit/photo-edit.component';
 import { AboutEditComponent } from './about/about-edit/about-edit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -20,6 +16,7 @@ import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth.guard';
 import { LoadingSpinerComponent } from './shared/loading-spiner/loading-spiner.component';
 import { FilmsModule } from './films/films.module';
+import { PhotosModule } from './photos/photos.module';
 
 @NgModule({
   declarations: [
@@ -28,10 +25,6 @@ import { FilmsModule } from './films/films.module';
     HomeComponent,
     AboutComponent,
     AboutEditComponent,
-    PhotosComponent,
-    PhotoComponent,
-    PhotoCreateComponent,
-    PhotoEditComponent,
     FooterComponent,
     AuthComponent,
     LoadingSpinerComponent
@@ -41,7 +34,8 @@ import { FilmsModule } from './films/films.module';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    FilmsModule
+    FilmsModule,
+    PhotosModule
   ],
   providers: [Title, HttpService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
