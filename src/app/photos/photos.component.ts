@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth/auth.service';
 import { Photo } from '../models/photos.model';
 import { PhotoService } from './photo.service';
 
@@ -10,11 +11,11 @@ import { PhotoService } from './photo.service';
 })
 export class PhotosComponent implements OnInit {
 
-  isLoggedIn = true;
+  isLoggedIn = false;
 
   allPhotos: Photo[];
 
-  constructor(private photos: PhotoService) {
+  constructor(private photos: PhotoService, private authService: AuthService) {
   }
 
   ngOnInit(): void {
@@ -22,7 +23,7 @@ export class PhotosComponent implements OnInit {
       .subscribe(data => {
         this.allPhotos = data
       })
-
+    this.isLoggedIn = this.authService._isLoggedIn;
   }
 
 }

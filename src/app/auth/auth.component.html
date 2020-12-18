@@ -3,7 +3,13 @@
         <div class="about-main-contact-heading">
             <h4>Login</h4>
         </div>
-        <form #login='ngForm' (ngSubmit)='onSubmit(login)'>
+        <div *ngIf='isLoading'>
+            <app-loading-spiner></app-loading-spiner>
+        </div>
+
+        <p class="error" *ngIf='error'>{{error}}</p>
+
+        <form #login='ngForm' (ngSubmit)='onSubmit(login)' *ngIf='!isLoading'>
             <div class="form-primary">
                 <input class="form-input-grey" name="email" ngModel type="email" placeholder="Email" required email
                     minlength="6">

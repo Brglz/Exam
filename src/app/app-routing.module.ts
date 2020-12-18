@@ -4,7 +4,6 @@ import { PhotosComponent } from './photos/photos.component'
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { FilmsComponent } from './films/films.component';
-import { BlogComponent } from './blog/blog.component';
 import { PhotoCreateComponent } from './photos/photo-create/photo-create.component';
 import { PhotoEditComponent } from './photos/photo-edit/photo-edit.component';
 import { FilmEditComponent } from './films/film-edit/film-edit.component';
@@ -12,6 +11,7 @@ import { FilmSingleEditComponent } from './films/film-single-edit/film-single-ed
 import { AboutEditComponent } from './about/about-edit/about-edit.component';
 import { FilmAddComponent } from './films/film-add/film-add.component';
 import { AuthComponent } from './auth/auth.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -27,23 +27,30 @@ const routes: Routes = [
     path: 'photos',
     pathMatch: 'full',
     component: PhotosComponent,
+
   },
   {
     path: 'photos/edit',
-    component: PhotoEditComponent
+    component: PhotoEditComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'photos/add',
-    component: PhotoCreateComponent
+    component: PhotoCreateComponent,
+    canActivate: [AuthGuard]
+
   },
   {
     path: 'about',
     pathMatch: 'full',
-    component: AboutComponent
+    component: AboutComponent,
+
   },
   {
     path: 'about/edit',
-    component: AboutEditComponent
+    component: AboutEditComponent,
+    canActivate: [AuthGuard]
+
   },
   {
     path: 'films',
@@ -52,20 +59,21 @@ const routes: Routes = [
   },
   {
     path: 'films/add',
-    component: FilmAddComponent
+    component: FilmAddComponent,
+    canActivate: [AuthGuard]
+
   },
   {
     path: 'films/edit',
-    component: FilmEditComponent
+    component: FilmEditComponent,
+    canActivate: [AuthGuard]
+
   },
   {
     path: 'films/edit/:id',
-    component: FilmSingleEditComponent
-  },
-  {
-    path: 'blog',
-    pathMatch: 'full',
-    component: BlogComponent
+    component: FilmSingleEditComponent,
+    canActivate: [AuthGuard]
+
   }
 ];
 

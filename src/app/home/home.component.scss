@@ -77,9 +77,9 @@
 
             &-photos {
                 // background: url('https://cdn.pixabay.com/photo/2020/08/10/07/35/woman-5477042_1280.jpg');
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
+                background-repeat: no-repeat !important;
+                background-position: center !important;
+                background-size: cover !important;
                 opacity: 0.8;
                 height: 440px;
                 

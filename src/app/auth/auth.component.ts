@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthResponseData, AuthService } from './auth.service';
+
 
 @Component({
   selector: 'app-auth',
@@ -7,15 +10,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
-  constructor() { }
+  isLoading: boolean = false;
+  error: string = null;
+
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(data) {
-    console.log(data.value.email, data.value.password);
+  onSubmit(form) {
+    const email: string = form.value.email;
+    const password: string = form.value.password;
+    this.isLoading = true;
+    let authObs: Observable<AuthResponseData>
 
-    data.reset()
+    authObs = this.authService.login(email, password);
+
+    authObs.subscribe(
+      data => {
+        this.isLoading = false
+        localStorage.setItem('token', data['user-token']);
+        this.error = null;
+        this.authService._isLoggedIn = true;
+        console.log(data);
+      },
+      error => {
+        this.isLoading = false;
+        this.error = error.error.message;
+        console.log(error.error.message);
+      }
+    );
+
+    form.reset()
 
   }
 

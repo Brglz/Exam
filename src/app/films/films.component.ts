@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth/auth.service';
 import { Film } from '../models/film.model';
 import { FilmService } from './film.service';
 
@@ -10,15 +11,16 @@ import { FilmService } from './film.service';
 })
 export class FilmsComponent implements OnInit {
 
-  isLoggedIn = true;
+  isLoggedIn = false;
 
   allFilms;
 
-  constructor(private films: FilmService) {
+  constructor(private films: FilmService, private authServie: AuthService) {
   }
 
   ngOnInit(): void {
     this.films.getFilms().subscribe(data => { this.allFilms = data })
+    this.isLoggedIn = this.authServie._isLoggedIn;
   }
 
 }
