@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./loading-spiner.component.scss']
 })
 export class LoadingSpinerComponent {
+  constructor() { }
 }

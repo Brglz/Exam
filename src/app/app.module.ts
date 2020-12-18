@@ -20,31 +20,30 @@ import { FilmAddComponent } from './films/film-add/film-add.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HttpService } from './http.service';
-import { LoadingSpinerComponent } from './shared/loading-spiner/loading-spiner.component';
 import { AuthComponent } from './auth/auth.component';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth.guard';
-
+import { LoadingSpinerComponent } from './shared/loading-spiner/loading-spiner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    PhotosComponent,
     AboutComponent,
-    FilmsComponent,
+    AboutEditComponent,
+    PhotosComponent,
     PhotoComponent,
-    FilmComponent,
-    FooterComponent,
     PhotoCreateComponent,
     PhotoEditComponent,
+    FilmsComponent,
+    FilmComponent,
     FilmEditComponent,
     FilmSingleEditComponent,
-    AboutEditComponent,
     FilmAddComponent,
-    LoadingSpinerComponent,
-    AuthComponent
+    FooterComponent,
+    AuthComponent,
+    LoadingSpinerComponent
   ],
   imports: [
     BrowserModule,
