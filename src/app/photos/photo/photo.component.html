@@ -2,7 +2,9 @@
     <div class="main__container-gallery-item">
         <div class="main__container-gallery-item-image">
             <img src="{{photo.imgURL}}" alt="{{photo.name}}">
-            <a *ngIf='isLoggedIn' (click)='removePhoto(photo.objectId)' class="btn-primary btn">Delete</a>
+            <!-- <a *ngIf='isLoggedIn' (click)='removePhoto(photo.objectId)' class="btn-primary btn"><i
+                    class="fas fa-trash"></i></a> -->
+
         </div>
         <div class="main__container-gallery-item-text">
             <p>{{photo.description}}</p>

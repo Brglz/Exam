@@ -18,6 +18,8 @@ export class HomeComponent implements OnInit {
   isLoggedIn = false;
   constructor(private title: Title, private photoService: PhotoService, private filmService: FilmService, private authService: AuthService) {
     this.isLoggedIn = authService._isLoggedIn;
+    console.log(this.isLoggedIn);
+
   }
 
   ngOnInit(): void {

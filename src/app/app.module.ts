@@ -15,8 +15,6 @@ import { AuthComponent } from './auth/auth.component';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth.guard';
 import { LoadingSpinerComponent } from './shared/loading-spiner/loading-spiner.component';
-import { FilmsModule } from './films/films.module';
-import { PhotosModule } from './photos/photos.module';
 
 @NgModule({
   declarations: [

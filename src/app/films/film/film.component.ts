@@ -20,9 +20,9 @@ export class FilmComponent implements OnInit {
     this.isLoggedIn = this.authServie._isLoggedIn;
   }
 
-  removeFilm(index) {
-    this.filmService.deleteFilm(index)
-      .subscribe()
-  }
+  // removeFilm(index) {
+  //   this.filmService.deleteFilm(index)
+  //     .subscribe()
+  // }
 
 }

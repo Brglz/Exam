@@ -20,10 +20,10 @@ export class PhotoComponent implements OnInit {
     this.isLoggedIn = this.authService._isLoggedIn;
   }
 
-  removePhoto(index) {
-    this.photoService.deletePhoto(index)
-      .subscribe()
-  }
+  // removePhoto(index) {
+  //   this.photoService.deletePhoto(index)
+  //     .subscribe()
+  // }
 
 
 }
