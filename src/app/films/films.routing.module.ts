@@ -8,24 +8,24 @@ import { FilmsComponent } from "./films.component";
 
 const routes: Routes = [
     {
-        path: 'films',
+        path: '',
         pathMatch: 'full',
         component: FilmsComponent
     },
     {
-        path: 'films/add',
+        path: 'add',
         component: FilmAddComponent,
         canActivate: [AuthGuard]
 
     },
     {
-        path: 'films/edit',
+        path: 'edit',
         component: FilmEditComponent,
         canActivate: [AuthGuard]
 
     },
     {
-        path: 'films/edit/:id',
+        path: 'edit/:id',
         component: FilmSingleEditComponent,
         canActivate: [AuthGuard]
 

@@ -26,6 +26,14 @@ const routes: Routes = [
     path: 'about/edit',
     component: AboutEditComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'films',
+    loadChildren: () => import('./films/films.module').then(m => m.FilmsModule)
+  },
+  {
+    path: 'photos',
+    loadChildren: () => import('./photos/photos.module').then(m => m.PhotosModule)
   }
 
 ];

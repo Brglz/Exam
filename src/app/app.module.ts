@@ -34,8 +34,6 @@ import { PhotosModule } from './photos/photos.module';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    FilmsModule,
-    PhotosModule
   ],
   providers: [Title, HttpService, AuthService, AuthGuard],
   bootstrap: [AppComponent]

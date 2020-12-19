@@ -7,17 +7,17 @@ import { PhotosComponent } from "./photos.component";
 
 const routes: Routes = [
     {
-        path: 'photos',
+        path: '',
         pathMatch: 'full',
         component: PhotosComponent,
     },
     {
-        path: 'photos/edit',
+        path: 'edit',
         component: PhotoEditComponent,
         canActivate: [AuthGuard]
     },
     {
-        path: 'photos/add',
+        path: 'add',
         component: PhotoCreateComponent,
         canActivate: [AuthGuard]
     }
